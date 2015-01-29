@@ -5,9 +5,9 @@ import javax.inject.Inject;
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
-import br.com.henriqueluz.entity.Cachorro;
-import br.com.henriqueluz.entity.Canil;
-import br.com.henriqueluz.entity.Raca;
+import br.com.henriqueluz.entity.Dog;
+import br.com.henriqueluz.entity.Kennel;
+import br.com.henriqueluz.entity.Breed;
 
 @Controller
 public class CachorroController {
@@ -28,9 +28,8 @@ public class CachorroController {
 
 	@Path("/")
 	public void index() {
-		Raca labrador = new Raca("Labrador Retriever");
-		Canil sierraLab = new Canil("SierraLab", "Bonaldo");
-		Cachorro gadu = new Cachorro("Gadu", "Chocolate", labrador, sierraLab);
-		result.include("cachorro", gadu);
+		Dog gadu = new Dog();
+		gadu.setName("Gadu");
+		result.include("dog", gadu);
 	}
 }
