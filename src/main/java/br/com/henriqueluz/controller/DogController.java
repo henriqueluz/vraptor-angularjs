@@ -6,23 +6,22 @@ import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Result;
 import br.com.henriqueluz.entity.Dog;
-import br.com.henriqueluz.entity.Kennel;
-import br.com.henriqueluz.entity.Breed;
 
 @Controller
-public class CachorroController {
+@Path("dog")
+public class DogController {
 
 	private final Result result;
 
 	/**
 	 * @deprecated CDI eyes only
 	 */
-	protected CachorroController() {
+	protected DogController() {
 		this(null);
 	}
 	
 	@Inject
-	public CachorroController(Result result) {
+	public DogController(Result result) {
 		this.result = result;
 	}
 

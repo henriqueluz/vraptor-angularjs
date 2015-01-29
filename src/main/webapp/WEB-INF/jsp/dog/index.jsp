@@ -6,6 +6,6 @@
 <title>Sierra Lab</title>
 </head>
 <body>
-	${dog.nome } wishes you welcome!
+	${dog.name } wishes you welcome!
 </body>
 </html>
