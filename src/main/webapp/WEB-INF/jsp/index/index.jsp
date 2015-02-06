@@ -16,6 +16,35 @@
 
 </head>
 <body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Sierra Lab</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="/dogs/">Our Labs</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							Managing <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Breeds</a></li>
+							<li><a href="#">Dogs</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="/sierralab/contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="page-header">
+			<h1>Welcome!</h1>
+			<small>Labs with love <3</small>
+		</div>
+	</div>
 	
 </body>
 </html>

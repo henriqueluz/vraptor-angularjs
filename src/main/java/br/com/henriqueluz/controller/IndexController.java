@@ -9,4 +9,8 @@ public class IndexController {
 	@Get("/")
 	public void index() {
 	}
+	
+	@Get("/contact") 
+	public void contact() {
+	}
 }
