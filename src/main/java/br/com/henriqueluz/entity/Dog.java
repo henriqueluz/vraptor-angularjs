@@ -2,58 +2,26 @@ package br.com.henriqueluz.entity;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
 import br.com.henriqueluz.enumeration.Gender;
 
-@Entity
-public class Dog {
+public class Dog extends BasicEntity {
 
-	@Id
-	@GeneratedValue
-	private Long id;
-	
-	@Column
 	private String name;
 	
-	@Column
 	private String color;
 	
-	@Column
 	private LocalDate birthday;
 	
-	@Column
 	private Double weight;
 	
-	@Column
 	private Double size;
 	
-	@JoinColumn(name = "breed_id")
-	@ManyToOne
 	private Breed breed;
 	
-	@Enumerated(EnumType.STRING)
 	private Gender gender;
 	
-	@JoinColumn(name = "kennel_id")
-	@ManyToOne
 	private Kennel kennel;
 	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public String getName() {
 		return name;
 	}
