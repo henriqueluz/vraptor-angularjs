@@ -44,7 +44,7 @@ public class DogController {
 	
 	@Get("/dog")
 	public void findAll(Dog dog) {
-		result.use(Results.json()).from(dao.findAll()).serialize();
+		result.use(Results.json()).withoutRoot().from(dao.findAll()).serialize();
 	}
 	
 	@Post("/dog")
@@ -58,11 +58,13 @@ public class DogController {
     @Consumes("application/json")
     public void update(Dog dog) {
         dao.update(dog);
+        result.nothing();
     }
 	
 	@Delete("/dog/{dog.id}")
     public void delete(Dog dog) {
         dao.delete(dog);
+        result.nothing();
     }   
 	
 }

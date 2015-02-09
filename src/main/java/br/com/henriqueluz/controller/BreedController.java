@@ -39,29 +39,31 @@ public class BreedController {
 
 	@Get("/breed/{breed.id}")
     public void find(Breed breed) {
-        result.use(Results.json()).from(dao.find(breed.getId())).serialize();
+        result.use(Results.json()).withoutRoot().from(dao.find(breed.getId())).serialize();
     }
 	
 	@Get("/breed")
 	public void findAll(Breed breed) {
-		result.use(Results.json()).from(dao.findAll()).serialize();
+		result.use(Results.json()).withoutRoot().from(dao.findAll()).serialize();
 	}
 	
 	@Post("/breed")
     @Consumes("application/json")
 	public void save(Breed breed) {
 		dao.save(breed);
-		result.use(Results.json()).from(breed).serialize();
+		result.use(Results.json()).withoutRoot().from(breed).serialize();
 	}
 	
 	@Put("/breed/{breed.id}")
     @Consumes("application/json")
     public void update(Breed breed) {
         dao.update(breed);
+        result.nothing();
     }
 	
 	@Delete("/breed/{breed.id}")
     public void delete(Breed breed) {
         dao.delete(breed);
+        result.nothing();
     }   
 }
